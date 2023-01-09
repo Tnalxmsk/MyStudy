@@ -60,11 +60,12 @@ class HomeFragment: Fragment() {
         }
         adapterStory.setOnItemClickListener(object : DataRvAdapter.OnItemClickListener {
             override fun onItemClick(v: View, data: DataStory, pos: Int) {
-                val intent = Intent(activity, StoryClickActivity::class.java)
-                intent.putExtra("id", data.story_name)
-                intent.putExtra("time", data.time)
-                intent.putExtra("profileImage", data.story_profile)
-                intent.putExtra("storyImage", data.story_image)
+                val intent = Intent(activity, StoryClickActivity::class.java).apply {
+                    putExtra("id", data.story_name)
+                    putExtra("time", data.time)
+                    putExtra("profileImage", data.story_profile)
+                    putExtra("storyImage", data.story_image)
+                }
                 startActivity(intent)
             }
 
