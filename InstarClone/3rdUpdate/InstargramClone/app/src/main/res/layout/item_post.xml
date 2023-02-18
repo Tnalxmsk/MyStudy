@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/ib_post_profile_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="#00FF0000"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_profile_default" />
+
+        <TextView
+            android:id="@+id/tv_post_id"
+            android:layout_width="310dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:gravity="center_vertical"
+            android:text="name"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/ib_post_option"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#00FF0000"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_post_more_option" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/ib_post_image"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginTop="10dp"
+        android:background="#00FF0000"
+        android:scaleType="fitCenter"
+        android:src="@drawable/image_neck"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ib_post_image">
+
+        <ImageButton
+            android:id="@+id/ib_post_heart"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#00FF0000"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_heart" />
+
+        <ImageButton
+            android:id="@+id/ib_post_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#00FF0000"
+            android:paddingHorizontal="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_comment" />
+
+        <ImageButton
+            android:id="@+id/ib_post_share"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#00FF0000"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_share" />
+
+        <View
+            android:layout_width="250dp"
+            android:layout_height="match_parent" />
+
+        <ImageButton
+            android:id="@+id/ib_post_bookmark"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#00FF0000"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_bookmark" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_post_like"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="좋아요 10개"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout5" />
+
+    <TextView
+        android:id="@+id/tv_post_intro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:bufferType="spannable"
+        android:text="name1 안녕하세요 물댕입니다."
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.079"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_post_like" />
+
+    <TextView
+        android:id="@+id/tv_post_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textSize="16sp"
+        android:text="댓글 131개 모두 보기"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_post_intro" />
+
+    <TextView
+        android:id="@+id/tv_post_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="1시간 전"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.043"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_post_comment" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
