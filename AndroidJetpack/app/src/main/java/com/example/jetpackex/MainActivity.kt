@@ -3,7 +3,6 @@ package com.example.jetpackex
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.withCreated
 import com.example.jetpackex.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
