@@ -17,9 +17,24 @@ class MainActivity : AppCompatActivity() {
 
         val db = TextDatabase.getDatabase(this)
 
-        CoroutineScope(Dispatchers.IO).launch {
-            db.textDao().insert(TextEntity(0, "asdf"))
-            Log.d("MainActivity", db.textDao().getAllData().toString())
+        with(binding) {
+            mainInsertBt.setOnClickListener {
+                CoroutineScope(Dispatchers.IO).launch {
+                    db.textDao().insert(TextEntity(0, "asdf"))
+                    Log.d("MainActivity", db.textDao().getAllData().toString())
+                    mainEt.setText("")
+                }
+            }
+            mainGetDataBt.setOnClickListener {
+                CoroutineScope(Dispatchers.IO).launch {
+                    Log.d("MainActivity", db.textDao().getAllData().toString())
+                }
+            }
+            mainDeleteBt.setOnClickListener {
+                CoroutineScope(Dispatchers.IO).launch {
+                    db.textDao().deleteAllData()
+                }
+            }
         }
     }
 }
