@@ -5,6 +5,9 @@ import android.os.Bundle
 import android.util.Log
 import androidx.databinding.DataBindingUtil
 import com.example.myapplication.databinding.ActivityMainBinding
+import com.example.myapplication.db.TextDatabase
+import com.example.myapplication.entity.TextEntity
+import com.example.myapplication.entity.WordEntity
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -20,7 +23,8 @@ class MainActivity : AppCompatActivity() {
         with(binding) {
             mainInsertBt.setOnClickListener {
                 CoroutineScope(Dispatchers.IO).launch {
-                    db.textDao().insert(TextEntity(0, "asdf"))
+                    db.textDao().insert(TextEntity(0,  mainEt.text.toString()))
+                    db.wordDao().insert(WordEntity(0, mainEt.text.toString()))
                     Log.d("MainActivity", db.textDao().getAllData().toString())
                     mainEt.setText("")
                 }
@@ -28,11 +32,13 @@ class MainActivity : AppCompatActivity() {
             mainGetDataBt.setOnClickListener {
                 CoroutineScope(Dispatchers.IO).launch {
                     Log.d("MainActivity", db.textDao().getAllData().toString())
+                    Log.d("MainActivity", db.wordDao().getAllData().toString())
                 }
             }
             mainDeleteBt.setOnClickListener {
                 CoroutineScope(Dispatchers.IO).launch {
                     db.textDao().deleteAllData()
+                    db.wordDao().deleteAllData()
                 }
             }
         }

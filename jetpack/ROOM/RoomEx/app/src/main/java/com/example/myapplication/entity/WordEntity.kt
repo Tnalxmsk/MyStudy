@@ -1,14 +1,15 @@
-package com.example.myapplication
+package com.example.myapplication.entity
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "text_table")
-data class TextEntity(
+@Entity(tableName = "word_table")
+data class WordEntity (
+
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "id")
     var id : Int,
     @ColumnInfo(name = "text")
     var text : String
-)
+    )
