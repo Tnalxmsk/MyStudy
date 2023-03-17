@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.myapplication.adapter.CustomAdapter
 import com.example.myapplication.databinding.ActivityMainBinding
 import com.example.myapplication.viewModel.MainViewModel
 
@@ -26,6 +28,11 @@ class MainActivity : AppCompatActivity() {
             }
             mainDeleteBt.setOnClickListener {
                 viewModel.removeData()
+            }
+            viewModel.textList.observe(this@MainActivity) {
+                val customAdapter = CustomAdapter(it)
+                mainRv.adapter = customAdapter
+                mainRv.layoutManager = LinearLayoutManager(this@MainActivity)
             }
         }
     }
