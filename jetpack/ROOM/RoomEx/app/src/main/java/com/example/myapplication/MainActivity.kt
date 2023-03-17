@@ -5,7 +5,6 @@ import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import com.example.myapplication.databinding.ActivityMainBinding
-import com.example.myapplication.db.TextDatabase
 import com.example.myapplication.viewModel.MainViewModel
 
 class MainActivity : AppCompatActivity() {
