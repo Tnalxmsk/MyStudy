@@ -2,44 +2,31 @@ package com.example.myapplication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.ViewModelProvider
 import com.example.myapplication.databinding.ActivityMainBinding
 import com.example.myapplication.db.TextDatabase
-import com.example.myapplication.entity.TextEntity
-import com.example.myapplication.entity.WordEntity
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
+import com.example.myapplication.viewModel.MainViewModel
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
+    lateinit var viewModel: MainViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-
-        val db = TextDatabase.getDatabase(this)
+        viewModel = ViewModelProvider(this)[MainViewModel::class.java]
+        viewModel.getData()
 
         with(binding) {
             mainInsertBt.setOnClickListener {
-                CoroutineScope(Dispatchers.IO).launch {
-                    db.textDao().insert(TextEntity(0,  mainEt.text.toString()))
-                    db.wordDao().insert(WordEntity(0, mainEt.text.toString()))
-                    Log.d("MainActivity", db.textDao().getAllData().toString())
-                    mainEt.setText("")
-                }
+                viewModel.insertData(mainEt.text.toString())
+                mainEt.setText("")
             }
             mainGetDataBt.setOnClickListener {
-                CoroutineScope(Dispatchers.IO).launch {
-                    Log.d("MainActivity", db.textDao().getAllData().toString())
-                    Log.d("MainActivity", db.wordDao().getAllData().toString())
-                }
+                viewModel.getData()
             }
             mainDeleteBt.setOnClickListener {
-                CoroutineScope(Dispatchers.IO).launch {
-                    db.textDao().deleteAllData()
-                    db.wordDao().deleteAllData()
-                }
+                viewModel.removeData()
             }
         }
     }
