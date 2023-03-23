@@ -3,8 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BlankFragment2">
-
+    tools:context=".BlankFragment4">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,13 +13,13 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="fragment2"
+            android:text="fragment4"
             android:textSize="50sp"/>
         <Button
             android:id="@+id/main_bt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="bt2"/>
+            android:text="bt4"/>
 
     </LinearLayout>
 
