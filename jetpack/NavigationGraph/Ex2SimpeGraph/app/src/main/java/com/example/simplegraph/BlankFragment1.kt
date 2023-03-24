@@ -18,11 +18,14 @@ class BlankFragment1 : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentBlank1Binding.inflate(inflater, container, false)
+        val action = BlankFragment1Directions.actionBlankFragment1ToBlankFragment2("abcd")
         with(binding) {
             mainBt.setOnClickListener {
-                Navigation.findNavController(binding.root).navigate(R.id.action_blankFragment1_to_blankFragment2)
+                //findNavController(binding.root).navigate(R.id.action_blankFragment1_to_blankFragment2)
+                Navigation.findNavController(binding.root).navigate(action)
+
             }
         }
         return binding.root
