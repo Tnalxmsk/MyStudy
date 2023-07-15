@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="vm"
+            type="com.example.twb.MainViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="80sp"
+                android:text="나이"/>
+
+            <!--<TextView
+                android:layout_width="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/ageArea"
+                android:textSize="50sp"
+                android:text="@{Integer.toString(vm.mutableAge)}"/>-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/ageArea"
+                android:textSize="50sp"
+                myAge="@{vm.mutableAge}"/>
+
+            <ImageView
+                android:id="@+id/imageArea"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_margin="60dp"
+                myImg="@{vm.mutableAge}"
+                android:src="@drawable/ic_launcher_background"/>
+
+
+            <Button
+                android:id="@+id/plusBtn"
+                android:onClick="@{() -> vm.plus()}"
+                android:text="plus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
