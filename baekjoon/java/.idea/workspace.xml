@@ -1,10 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="6cfccee3-df5a-42bb-a4de-98e27089ee6c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../kotlin/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kotlin/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/src/Baekjoon10828.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../kotlin/app/src/main/java/com/example/myapplication/ui/theme/Color.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../kotlin/app/src/main/java/com/example/myapplication/ui/theme/Theme.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../kotlin/app/src/main/java/com/example/myapplication/ui/theme/Type.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/src/Baekjoon11720.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/src/Baekjoon11720.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/src/Baekjoon1546.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/src/Baekjoon1546.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/src/Baekjoon2566.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/src/Baekjoon2566.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/src/Baekjoon2753.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/src/Baekjoon2753.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/src/Baekjoon8393.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/src/Baekjoon8393.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../kotlin/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kotlin/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../kotlin/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../kotlin/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kotlin/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../kotlin/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kotlin/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kotlin/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kotlin/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kotlin/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,9 +37,14 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/alstn/MyStudy/baekjoon/java",
+    "last_opened_file_path": "C:/Users/alstn/OneDrive/바탕 화면/JavaStudy",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -39,6 +60,8 @@
       <option name="presentableId" value="Default" />
       <updated>1683220813483</updated>
       <workItem from="1683220814464" duration="101000" />
+      <workItem from="1683432845263" duration="719000" />
+      <workItem from="1683450407170" duration="104000" />
     </task>
     <servers />
   </component>

@@ -4,6 +4,7 @@ import java.io.InputStreamReader;
 
 
 public class Baekjoon1546 {
+    // 1차원 배열
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
